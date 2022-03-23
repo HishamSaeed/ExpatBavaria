@@ -20,6 +20,8 @@ namespace ExpatBavaria
     /// </summary>
     public partial class MainWindow : Window
     {
+        // TODO make theme for close,maximize and minimze button
+        // change picture of close,maximize and minimze button
         public MainWindow()
         {
             InitializeComponent();
