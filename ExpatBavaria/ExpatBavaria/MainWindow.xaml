@@ -47,7 +47,8 @@
                     <Button Width="40"
                             Background="Transparent"
                             FontSize="14"
-                            BorderThickness="0">
+                            BorderThickness="0"
+                            >
                         <Image Source="Images/Minimize_Icon.png"/>
                     </Button>
 
@@ -59,13 +60,13 @@
                                />
                     </Button>
 
-                    <Button Width="40"
-                            Background="Transparent"
+                    <Button Width="40"                            
                             FontSize="14"
-                            BorderThickness="0">
-                        <Image Source="Images/Close_Icon.png"/>
-                    </Button>
-                            
+                            BorderThickness="0"
+                            Style="{StaticResource CloseButtonTheme}"/>
+
+
+
 
 
 
