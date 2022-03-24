@@ -45,25 +45,26 @@
                             Background="Transparent"
                             >
                     <Button Width="40"
-                            Background="Transparent"
                             FontSize="14"
                             BorderThickness="0"
+                            Style="{StaticResource MinimizeButtonTheme}"
                             >
                         <Image Source="Images/Minimize_Icon.png"/>
-                    </Button>
-
-                    <Button Width="40"
-                            Background="Transparent"
-                            FontSize="14"
-                            BorderThickness="0">
-                        <Image Source="Images/Maximize_Icon.png"
-                               />
                     </Button>
 
                     <Button Width="40"                            
                             FontSize="14"
                             BorderThickness="0"
-                            Style="{StaticResource CloseButtonTheme}"/>
+                            Style="{StaticResource MinimizeButtonTheme}">
+                        <Image Source="Images/Maximize_Icon.png"/>
+                    </Button>
+
+                    <Button Width="40"                            
+                            FontSize="14"
+                            BorderThickness="0"
+                            Style="{StaticResource CloseButtonTheme}">
+                        <Image Source="Images/Close_Icon.png"/>
+                    </Button>
 
 
 

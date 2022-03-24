@@ -5,7 +5,7 @@
 
     <Style BasedOn="{StaticResource {x:Type Button}}"
            TargetType="{x:Type Button}"
-           x:Key="CloseButtonTheme">
+           x:Key="MinimizeButtonTheme">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
@@ -24,19 +24,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-
-                            <Border Background="Red"
-                                    CornerRadius="0,10,0,0">
-                                <ContentPresenter Content="{TemplateBinding Content}"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-
-
+                <Setter Property="Background" Value="Red"/>
             </Trigger>
         </Style.Triggers>
     </Style>
