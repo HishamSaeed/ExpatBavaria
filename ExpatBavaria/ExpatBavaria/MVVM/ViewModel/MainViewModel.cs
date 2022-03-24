@@ -17,6 +17,10 @@ namespace ExpatBavaria.MVVM.ViewModel
 
         public RelayCommand TripViewCommand { get; set; }
 
+        public RelayCommand CloseButtonCommand { get; set; }
+
+        public RelayCommand MinimzeButtonCommand { get; set; }
+
         public HomeViewModel HomeVM { get; set; }
 
         public WandernViewModel WandernVM { get; set; }
@@ -65,6 +69,13 @@ namespace ExpatBavaria.MVVM.ViewModel
             {
                 CurrentView = TripVM;
             });
+
+            CloseButtonCommand = new RelayCommand(o =>
+            {
+                System.Windows.Application.Current.Shutdown();
+            });
+
+            
         }
     }
 }

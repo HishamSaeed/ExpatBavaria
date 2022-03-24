@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModernDesign.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,11 +21,17 @@ namespace ExpatBavaria
     /// </summary>
     public partial class MainWindow : Window
     {
+        public RelayCommand MinimzeButtonCommand { get; set; }
         // TODO make theme for close,maximize and minimze button
         // change picture of close,maximize and minimze button
         public MainWindow()
         {
             InitializeComponent();
+
+            MinimzeButtonCommand = new RelayCommand(o =>
+            {
+                this.WindowState = System.Windows.WindowState.Minimized;
+            });
         }
     }
 }
