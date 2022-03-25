@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ExpatBavaria.MVVM.ViewModel
 {
     class MainViewModel : ObservableObjects
     {
+        private Window mainWindow;
+
         public RelayCommand HomeViewCommand { get; set; }
 
         public RelayCommand WandernViewCommand { get; set; }
@@ -19,8 +22,8 @@ namespace ExpatBavaria.MVVM.ViewModel
 
         public RelayCommand CloseButtonCommand { get; set; }
 
-        public RelayCommand MinimzeButtonCommand { get; set; }
-
+        public RelayCommand MinimizeButtonCommand { get; set; }
+     
         public HomeViewModel HomeVM { get; set; }
 
         public WandernViewModel WandernVM { get; set; }
@@ -41,8 +44,10 @@ namespace ExpatBavaria.MVVM.ViewModel
             }
         }
 
-        public MainViewModel()
+        public MainViewModel(Window window)
         {
+            this.mainWindow = window;
+
             HomeVM = new HomeViewModel();
             WandernVM = new WandernViewModel();
             CitiesVM = new CitiesViewModel();
@@ -75,7 +80,13 @@ namespace ExpatBavaria.MVVM.ViewModel
                 System.Windows.Application.Current.Shutdown();
             });
 
+            MinimizeButtonCommand = new RelayCommand(o =>
+           {
+               this.mainWindow.WindowState = WindowState.Minimized;
+           });
+
             
+
         }
     }
 }

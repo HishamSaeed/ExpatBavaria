@@ -13,10 +13,6 @@
         AllowsTransparency="True"
         >
 
-    <Window.DataContext>
-        <viewModel:MainViewModel/>
-    </Window.DataContext>
-
     
 
     <Border Background="#272537" CornerRadius="10">
@@ -52,23 +48,19 @@
                             Style="{StaticResource MinimizeButtonTheme}"
                             Command="{Binding MinimizeButtonCommand}"
                             >
-                        <Image Source="Images/Minimize_Icon.png"/>
-                    </Button>
-
-                    <Button Width="40"                            
-                            FontSize="14"
-                            BorderThickness="0"
-                            Style="{StaticResource MinimizeButtonTheme}">
-                        <Image Source="Images/Maximize_Icon.png"/>
+                        <TextBlock Text="__" Foreground="BlueViolet"/>
                     </Button>
 
                     <Button Width="40"                            
                             FontSize="14"
                             BorderThickness="0"
                             Style="{StaticResource CloseButtonTheme}"
-                            Command="{Binding CloseButtonCommand}">
-                        <Image Source="Images/Close_Icon.png"/>
+                            Command="{Binding CloseButtonCommand}"
+                            >
+                        <TextBlock Text="X" Foreground="BlueViolet"/>
                     </Button>
+
+
 
 
 

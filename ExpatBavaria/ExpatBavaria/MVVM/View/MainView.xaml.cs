@@ -1,6 +1,4 @@
-﻿using ExpatBavaria.MVVM.ViewModel;
-using ModernDesign.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExpatBavaria
+namespace ExpatBavaria.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : UserControl
     {
-        
-        // TODO make theme for close,maximize and minimze button
-        // change picture of close,maximize and minimze button
-        public MainWindow()
+        public MainView()
         {
             InitializeComponent();
-
-            this.DataContext = new MainViewModel(this);
         }
     }
 }

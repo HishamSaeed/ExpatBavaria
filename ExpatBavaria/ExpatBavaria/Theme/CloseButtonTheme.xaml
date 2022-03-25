@@ -2,6 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:ExpatBavaria.Theme">
 
+    <Color x:Key="WindowButtonBackground">#106f73</Color>
+    <SolidColorBrush x:Key="WindowButtonBackgroundBrush" Color="{StaticResource WindowButtonBackground}" />
 
     <Style BasedOn="{StaticResource {x:Type Button}}"
            TargetType="{x:Type Button}"
@@ -11,12 +13,21 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
 
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="0,10,0,0"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                >
+                            <ContentPresenter Content="{TemplateBinding Content}"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            
+            <Setter Property="Background" Value="{StaticResource WindowButtonBackgroundBrush}"/>
             <Setter Property="Background" Value="Transparent"/>
         </Style.Setters>
 
@@ -29,8 +40,12 @@
                         <ControlTemplate TargetType="Button">
 
                             <Border Background="Red"
-                                    CornerRadius="0,10,0,0">
-                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    CornerRadius="0,10,0,0"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch">
+                                <ContentPresenter Content="{TemplateBinding Content}"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
