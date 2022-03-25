@@ -12,6 +12,8 @@ namespace ExpatBavaria.MVVM.ViewModel
     {
         private Window mainWindow;
 
+        // Menu buttons commands
+        #region
         public RelayCommand HomeViewCommand { get; set; }
 
         public RelayCommand WandernViewCommand { get; set; }
@@ -19,11 +21,17 @@ namespace ExpatBavaria.MVVM.ViewModel
         public RelayCommand CitiesViewCommand { get; set; }
 
         public RelayCommand TripViewCommand { get; set; }
+        #endregion
 
+        // Window control button commands
+        #region
         public RelayCommand CloseButtonCommand { get; set; }
 
         public RelayCommand MinimizeButtonCommand { get; set; }
-     
+        #endregion
+
+        // View Models Objects(containers)
+        #region
         public HomeViewModel HomeVM { get; set; }
 
         public WandernViewModel WandernVM { get; set; }
@@ -31,6 +39,7 @@ namespace ExpatBavaria.MVVM.ViewModel
         public CitiesViewModel CitiesVM { get; set; }
 
         public TripViewModel TripVM { get; set; }
+        #endregion
 
         private object _currentView;
 
