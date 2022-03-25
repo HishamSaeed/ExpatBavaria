@@ -22,7 +22,7 @@ namespace ExpatBavaria.MVVM.ViewModel
 
         public RelayCommand TripViewCommand { get; set; }
         #endregion
-
+        
         // Window control button commands
         #region
         public RelayCommand CloseButtonCommand { get; set; }
@@ -40,6 +40,8 @@ namespace ExpatBavaria.MVVM.ViewModel
 
         public TripViewModel TripVM { get; set; }
         #endregion
+
+        
 
         private object _currentView;
 
@@ -93,9 +95,7 @@ namespace ExpatBavaria.MVVM.ViewModel
            {
                this.mainWindow.WindowState = WindowState.Minimized;
            });
-
-            
-
+                  
         }
     }
 }

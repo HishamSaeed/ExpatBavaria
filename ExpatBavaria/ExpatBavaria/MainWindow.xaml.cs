@@ -31,5 +31,11 @@ namespace ExpatBavaria
 
             this.DataContext = new MainViewModel(this);
         }
+
+        private void DragWithHeader(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == System.Windows.Input.MouseButton.Left)
+                DragMove();
+        }
     }
 }
